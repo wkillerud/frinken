@@ -1,0 +1,115 @@
+:root {
+	--black: #15202b;
+	--white: #fff;
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050f;
+
+	--spacing-2: 0.125rem;
+	--spacing-4: 0.25rem;
+	--spacing-8: clamp(0.25rem, 0.42vw + 0.17rem, 0.5rem);
+	--spacing-12: clamp(0.36rem, 0.6vw + 0.24rem, 0.72rem);
+	--spacing-16: clamp(0.52rem, 0.86vw + 0.35rem, 1.04rem);
+	--spacing-20: clamp(0.62rem, 1.04vw + 0.41rem, 1.24rem);
+	--spacing-24: clamp(1.25rem, 0.42vw + 1.17rem, 1.5rem);
+	--spacing-32: clamp(1.56rem, 1.09vw + 1.42rem, 2rem);
+	--spacing-42: clamp(1.95rem, 1.19vw + 1.72rem, 2.66rem);
+	--spacing-50: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+	--spacing-62: clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem);
+
+	--font-size-base: clamp(1.13rem, 0.45vw + 1.01rem, 1.38rem);
+	--font-size-h2: clamp(1.51rem, 1.08vw + 1.21rem, 1.93rem);
+
+	--line-height-base: calc(1em + 0.72rem);
+	--line-height-heading: calc(1em + 0.5rem);
+
+	--background-color: var(--white);
+	--text-color: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: var(--white);
+		--background-color: var(--black);
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+
+body {
+	font-family: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052,
+		serif;
+	font-size: var(--font-size-base);
+	line-height: calc(1em + 0.725rem);
+}
+
+main {
+	padding: var(--spacing-16);
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.articles {
+	display: flex;
+	gap: var(--spacing-42);
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+article {
+	max-width: 380px;
+}
+
+article h2:first-child {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-base);
+	line-height: var(--line-height-base);
+}
+
+h2 {
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-base);
+	line-height: var(--line-height-heading);
+}
+
+p {
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-base);
+	line-height: var(--line-height-base);
+}
+p:last-child {
+	margin-bottom: 0;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
