@@ -14,7 +14,7 @@
 	"author": "William Killerud <william@killerud.com> (https://killerud.com/)",
 	"license": "MIT",
 	"dependencies": {
-		"fast-xml-parser": "^4.3.6",
+		"fast-xml-parser": "^4.4.1",
 		"fastify": "^4.27.0",
 		"undici": "^6.16.0"
 	},
